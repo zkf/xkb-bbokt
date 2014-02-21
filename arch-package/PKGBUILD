@@ -1,0 +1,38 @@
+# Maintainer: Bjørnar Hansen <tilbjornar@gmail.com>
+pkgname=xkb-bbokt-git
+pkgver=0.1
+pkgrel=1
+pkgdesc="Xkb keyboard layouts and tricks from http://forum.colemak.com/viewtopic.php?id=1438&p=1"
+arch=(any)
+url="https://github.com/zkf/xkb-bbokt"
+license=('unknown')
+depends=('xkeyboard-config')
+makedepends=('git')
+source=()
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+
+_gitroot='https://github.com/zkf/xkb-bbokt'
+_gitname=xkb-bbokt
+
+build() {
+  cd "$srcdir"
+  msg "Connecting to GIT server...."
+
+  if [[ -d "$_gitname" ]]; then
+    cd "$_gitname" && git pull origin
+    msg "The local files are updated."
+  else
+    git clone "$_gitroot" "$_gitname"
+  fi
+
+  msg "GIT checkout done or server timeout"
+}
+
+package() {
+  cd "$srcdir/$_gitname"
+  mkdir -p "${pkgdir}/usr/share/X11/xkb/"
+  cp -r {geometry,keycodes,rules,symbols} "${pkgdir}/usr/share/X11/xkb/"
+}
+
+# vim:set ts=2 sw=2 et:
