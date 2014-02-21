@@ -1,0 +1,148 @@
+// Addition to the /xkb/geometry/pc file: 
+// pc104_Angle ergonomic mod (by DreymaR, 2011)
+xkb_geometry "pc104angle-z" {
+    include "pc(pc104)"
+
+    description= "Generic 104 - Angle(Z)Ergo mod";
+
+    section.left= 19;
+    row.left= 1;
+    key.shape= "NORM";
+    key.gap=  1;
+    section "Alpha" {
+	top= 61;
+	row {
+	    top= 58;
+	    keys { { <LFSH>, "LFSH", color="grey20" },
+		    <AB02>, <AB03>, <AB04>, <AB05>, <AB01>, 
+		    <AB06>, <AB07>, <AB08>, <AB09>, <AB10>, 
+		    { <RTSH>, "RTSH", color="grey20" }
+	    };
+	};
+    }; // End of "Alpha" section
+
+}; // End of "pc104angle-z" geometry (by DreymaR 2011)
+
+// Addition to the /xkb/geometry/pc file: 
+// pc104_Wide(Quote) ergonomic mod (by DreymaR, 2013)
+xkb_geometry "pc104wide-qu" {
+    include "pc(pc104)"
+
+    description= "Generic 104 - Wide(Quote)Ergo mod";
+
+    section.left= 19;
+    row.left= 1;
+    key.shape= "NORM";
+    key.gap=  1;
+    section "Alpha" {
+	top= 61;
+	row {
+	    top= 1;
+	    keys { <TLDE>, <AE01>, <AE02>, <AE03>, <AE04>,
+		   <AE05>, <AE06>, <AE12>, <AE07>, <AE08>,
+		   <AE09>, <AE10>, <AE11>,
+		   { <BKSP>, "BKSP", color="grey20" }
+	    };
+	};
+	row {
+	    top= 20;
+	    keys { { <TAB>, "TABK", color="grey20" },
+		   <AD01>, <AD02>, <AD03>, <AD04>, <AD05>, 
+		   <AD11>, <AD06>, <AD07>, <AD08>, <AD09>, 
+		   <AD10>, <AC11>, { <BKSL>, "BKSL" }
+	    };
+	};
+	row {
+	    top= 39;
+	    keys { { <CAPS>, "CAPS", color="grey20" },
+		   <AC01>, <AC02>, <AC03>, <AC04>, <AC05>, 
+		   <AD12>, <AC06>, <AC07>, <AC08>, <AC09>, 
+		   <AC10>, { <RTRN>, "RTRN", color="grey20" }
+	    };
+	};
+	row {
+	    top= 58;
+	    keys { { <LFSH>, "LFSH", color="grey20" },
+		    <AB01>, <AB02>, <AB03>, <AB04>, <AB05>, 
+		    <AB10>, <AB06>, <AB07>, <AB08>, <AB09>, 
+		    { <RTSH>, "RTSH", color="grey20" }
+	    };
+	};
+    }; // End of "Alpha" section
+
+}; // End of "pc104wide-qu" geometry (by DreymaR 2013)
+
+// Addition to the /xkb/geometry/pc file: 
+// pc105_Angle-LSGT ergonomic mod (by DreymaR, 2011)
+xkb_geometry "pc105angle-lg" {
+    include "pc(pc105)"
+
+    description= "Generic 105 - Angle(LSGT)Ergo mod";
+
+    section.left= 19;
+    row.left= 1;
+    key.shape= "NORM";
+    key.gap=  1;
+    section "Alpha" {
+	top= 61;
+	row {
+	    top= 58;
+	    keys { { <LFSH>, "LFSH", color="grey20" },
+		    <AB01>, <AB02>, <AB03>, <AB04>, <AB05>, <LSGT>, 
+		    <AB06>, <AB07>, <AB08>, <AB09>, <AB10>, 
+		    { <RTSH>, "RTSH", color="grey20" }
+	    };
+	};
+    }; // End of "Alpha" section
+
+}; // End of "pc105angle-lg" geometry
+
+// Addition to the /xkb/geometry/pc file: 
+// pc105_AngleWide(Slash) ergonomic mod (by DreymaR, 2011)
+xkb_geometry "pc105awide-sl" {
+    include "pc(pc105)"
+
+    description= "Generic 105 - AngleWide(/)Ergo mod";
+
+    section.left= 19;
+    row.left= 1;
+    key.shape= "NORM";
+    key.gap=  1;
+    section "Alpha" {
+	top= 61;
+	row {
+	    top= 1;
+	    keys { <TLDE>, <AE01>, <AE02>, <AE03>, <AE04>,
+		   <AE05>, <AE06>, <AE12>, <AE07>, <AE08>,
+		   <AE09>, <AE10>, <AE11>,
+		   { <BKSP>, "BKSP", color="grey20" }
+	    };
+	};
+	row {
+	    top= 20;
+	    keys { { <TAB>, "TABK", color="grey20" },
+		   <AD01>, <AD02>, <AD03>, <AD04>, <AD05>, 
+		   <AD11>, <AD06>, <AD07>, <AD08>, <AD09>, 
+		   <AD10>, <AB10>, { <RTRN>, "RTRN", color="grey20" }
+	    };
+	};
+	row {
+	    top= 39;
+	    keys { { <CAPS>, "CAPS", color="grey20" },
+		   <AC01>, <AC02>, <AC03>, <AC04>, <AC05>, 
+		   <AD12>, <AC06>, <AC07>, <AC08>, <AC09>, 
+		   <AC10>, <AC11>
+	    };
+	};
+	row {
+	    top= 58;
+	    keys { { <LFSH>, "LFSH", color="grey20" },
+		    <AB01>, <AB02>, <AB03>, <AB04>, <AB05>, <LSGT>, 
+		    <BKSL>, <AB06>, <AB07>, <AB08>, <AB09>, 
+		    { <RTSH>, "RTSH", color="grey20" }
+	    };
+	};
+    }; // End of "Alpha" section
+
+}; // End of "pc105awide-sl" geometry (by DreymaR 2011)
+

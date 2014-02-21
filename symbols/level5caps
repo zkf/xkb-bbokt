@@ -1,0 +1,33 @@
+// 2011-05-04 Øystein Bech "DreymaR" Gadmar: CapsLock Level5 switch
+// Check out the ca(multix) layout as an example of how it works.
+partial modifier_keys
+xkb_symbols "caps_switch" {
+  key <CAPS> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+  modifier_map Mod3   { ISO_Level5_Shift };
+};
+
+partial modifier_keys
+xkb_symbols "caps_switch_lock" {
+
+  include "level5(lock)"
+
+  key <CAPS> {
+    type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
+  };
+};
+
+partial modifier_keys
+xkb_symbols "caps_switch_lock_cancel" {
+
+  include "level5(lock)"
+
+  key <CAPS> {
+    type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
+  };
+};
+

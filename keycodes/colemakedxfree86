@@ -1,0 +1,107 @@
+// Addition to the /xkb/keycodes/xfree86 file:
+// pc104_Angle(Z) ergonomic mod (by DreymaR, 2011)
+xkb_keycodes "pc104angle-z" {
+
+    <AB02> =  52;	// X	<  Z
+    <AB03> =  53;	// C	<  X
+    <AB04> =  54;	// V	<  C
+    <AB05> =  55;	// B	<  V
+    <AB01> =  56;	// Z	<  B
+
+    augment "xfree86(xfree86)"
+};
+
+// Addition to the /xkb/keycodes/xfree86 file:
+// pc104_(Angle)Wide(Quote) ergonomic mod (by DreymaR, 2013)
+xkb_keycodes "pc104wide-qu" {
+
+    //Num row (I consider it necessary)
+    <AE12> =  16;	// =	<  7
+    <AE07> =  17;	// 7	<  8
+    <AE08> =  18;	// 8	<  9
+    <AE09> =  19;	// 9	<  0
+    <AE10> =  20;	// 0	<  -
+    <AE11> =  21;	// -	<  =
+
+    //Letter rows (upper, middle, lower)
+    <AD11> =  29;	// [	<  Y
+    <AD06> =  30;	// Y	<  U
+    <AD07> =  31;	// U	<  I
+    <AD08> =  32;	// I	<  O
+    <AD09> =  33;	// O	<  P
+    <AD10> =  34;	// P	<  [
+    <AC11> =  35;	// '	<  ]
+//    <AC12> =  51;	// \	<  \
+
+    <AD12> =  43;	// ]	<  H
+    <AC06> =  44;	// H	<  J
+    <AC07> =  45;	// J	<  K
+    <AC08> =  46;	// K	<  L
+    <AC09> =  47;	// L	<  ;
+    <AC10> =  48;	// ;	<  '
+
+    <AB10> =  57;	// /	<  N
+    <AB06> =  58;	// N	<  M
+    <AB07> =  59;	// M	<  ,
+    <AB08> =  60;	// ,	<  .
+    <AB09> =  61;	// .	<  /
+
+    //To use the pc104_Angle(Z) mod with this Wide mod, augment it below:
+//    augment "xfree86(pc104angle-z)"
+    augment "xfree86(xfree86)"
+};
+
+// Addition to the /xkb/keycodes/xfree86 file:
+// pc105_Angle(LSGT) ergonomic mod (by DreymaR, 2011)
+xkb_keycodes "pc105angle-lg" {
+
+    <AB01> =  94;	// Z	<  LG
+    <AB02> =  52;	// X	<  Z
+    <AB03> =  53;	// C	<  X
+    <AB04> =  54;	// V	<  C
+    <AB05> =  55;	// B	<  V
+    <LSGT> =  56;	// LG	<  B
+
+    augment "xfree86(xfree86)"
+};
+
+// Addition to the /xkb/keycodes/xfree86 file:
+// pc105_AngleWide(Slash) ergonomic mod (by DreymaR, 2011)
+xkb_keycodes "pc105awide-sl" {
+
+    //Num row (I consider it necessary)
+    <AE12> =  16;	// =	<  7
+    <AE07> =  17;	// 7	<  8
+    <AE08> =  18;	// 8	<  9
+    <AE09> =  19;	// 9	<  0
+    <AE10> =  20;	// 0	<  -
+    <AE11> =  21;	// -	<  =
+
+    //Letter rows (upper, middle, lower)
+    <AD11> =  29;	// [	<  Y
+    <AD06> =  30;	// Y	<  U
+    <AD07> =  31;	// U	<  I
+    <AD08> =  32;	// I	<  O
+    <AD09> =  33;	// O	<  P
+    <AD10> =  34;	// P	<  [
+    <AB10> =  35;	// /	<  ]
+
+//    <BKSL> =  43;	// \	<  H
+    <AD12> =  43;	// ]	<  H
+    <AC06> =  44;	// H	<  J
+    <AC07> =  45;	// J	<  K
+    <AC08> =  46;	// K	<  L
+    <AC09> =  47;	// L	<  ;
+    <AC10> =  48;	// ;	<  '
+    <AC11> =  51;	// '	<  \
+
+//    <AB10> =  57;	// /	<  N
+    <BKSL> =  57;	// \	<  N
+    <AB06> =  58;	// N	<  M
+    <AB07> =  59;	// M	<  ,
+    <AB08> =  60;	// ,	<  .
+    <AB09> =  61;	// .	<  /
+
+    augment "colemakedxfree86(pc105angle-lg)"
+};
+

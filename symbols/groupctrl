@@ -1,0 +1,18 @@
+// Left Ctrl key temporary chooses the second keyboard group.
+partial modifier_keys
+xkb_symbols "lctrl_switch" {
+    key <LCTL>  {
+        symbols[Group1]= [ Mode_switch ]
+    };
+};
+
+// Control_R switches to the next group (until it is released).
+// Control_L+Control_R toggles groups.
+partial modifier_keys
+xkb_symbols "rctrl_switch_toggle" {
+    key <RCTL> {
+        type[ Group1 ]    = "PC_CONTROL_LEVEL2",
+        symbols[ Group1 ] = [ Mode_switch, ISO_Next_Group ]
+    };
+}; // rctrl_switch_toggle
+

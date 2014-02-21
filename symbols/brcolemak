@@ -1,0 +1,33 @@
+// 2012-01-01 Øystein Bech "DreymaR" Gadmar: National Colemak - eD variants for Portuguese (Brazil).
+// (Colemak: 2006-01-01 Shai Coleman, http://colemak.com/ . Public domain.)
+// This variant keeps the national symbol and special letter setup.
+partial alphanumeric_keys
+xkb_symbols "cmk_ed_ks" {
+    include "br(abnt2)"
+    include "colemak(cmk_ed_letters)"
+    name[Group1]= "Portuguese (Brazil, Colemak[eD], keep local symbols)";
+
+    key <AD10>	{ [ ccedilla, Ccedilla, dead_acute, dead_doubleacute ] };// from <AC10>
+};
+
+// This variant uses the US-type symbol key setup (recommended!) as it is nearly an intl. standard.
+// For Portuguese (Brazil), necessary local letters are added to designated flexible spots in the layout.
+partial alphanumeric_keys
+xkb_symbols "cmk_ed_us" {
+    include "colemak(cmk_ed_letters)"
+    include "colemak(cmk_ed_symbols)"
+    include "level3(ralt_switch)"
+    name[Group1]= "Portuguese (Brazil, Colemak[eD], unified symbols)";
+
+//    key <AD11> { [  dead_tilde, dead_circumflex,         bracketleft,           braceleft ] };// from <AC11>**
+//    key <AD12> { [  dead_acute,      dead_grave,        bracketright,          braceright ] };// from <AD11>**
+
+    key <AD11> { [  dead_acute,      dead_grave,         bracketleft,           braceleft ] };// <AD11> kept
+    key <AD12> { [  dead_tilde, dead_circumflex,        bracketright,          braceright ] };// from <AC11>
+    key <LSGT> { [      ccedilla,      Ccedilla,                  oe,                  OE ] };// from <AC10>
+    key <AB06> { [             k,             K,         Greek_alpha,         Greek_delta ] };// keep α/δ
+// The Brazilian ABNT-2 keyboard has the special <AB11> key:
+    key <AB11>	{ [  masculine,     ordfeminine,            question,        questiondown ] };// from pt <AC11>
+// ** NOTE: The pt and br layouts have been harmonized; this should not affect typing efficiency.
+//    Whether to keep the acute on br <AD11> or pt <AD12> was a bit of a choice; the acute seems logical.
+};

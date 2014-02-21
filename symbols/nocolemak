@@ -1,0 +1,31 @@
+// 2012-01-01 Øystein Bech "DreymaR" Gadmar: National Colemak[eD] variants for Norwegian.
+// (Colemak: 2006-01-01 Shai Coleman, http://colemak.com/ . Public domain.)
+// This variant keeps the national symbol and special letter setup.
+partial alphanumeric_keys
+xkb_symbols "cmk_ed_ks" {
+    include "no(basic)"
+    include "colemak(cmk_ed_letters)"
+    name[Group1]= "Norwegian (Colemak[eD], keep local symbols)";
+
+    key <AD10>	{ [ oslash, Ooblique, dead_acute, dead_doubleacute ] };// from <AC10>
+};
+
+// This variant uses the US-type symbol key setup (recommended!) as it is nearly an intl. standard.
+// For Norwegian, necessary local letters are added to designated flexible spots in the layout.
+// For "writing" and "coding" subvariants, move the brackets between lv1-2 and lv3-4 as shown.
+partial alphanumeric_keys
+xkb_symbols "cmk_ed_us" {
+    include "colemak(cmk_ed_letters)"
+    include "colemak(cmk_ed_symbols)"
+    include "level3(ralt_switch)"
+    name[Group1]= "Norwegian (Colemak[eD], unified symbols)";
+
+//    key <AD11> { [   bracketleft,     braceleft,               aring,               Aring ] };
+//    key <AD12> { [  bracketright,    braceright,                  ae,                  AE ] };
+    key <AD11> { [         aring,         Aring,         bracketleft,           braceleft ] };// from <AD10>
+    key <AD12> { [            ae,            AE,        bracketright,          braceright ] };// from <AC11>
+    key <LSGT> { [        oslash,      Ooblique,                  oe,                  OE ] };// from <AC10>
+    key <AC01> { [             a,             A,         Greek_alpha,         Greek_delta ] };// ae/AE moved
+// NOTE: The Scandinavian layouts (dk/fi/no/se) have been harmonized. This shouldn't affect typing efficiency.
+};
+
