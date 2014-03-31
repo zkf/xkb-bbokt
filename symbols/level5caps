@@ -1,5 +1,7 @@
 // 2011-05-04 Øystein Bech "DreymaR" Gadmar: CapsLock Level5 switch
-// Check out the ca(multix) layout as an example of how it works.
+// (See the ca(multix) layout for example, or my extend mappings)
+
+// CapsLock chooses 5th level
 partial modifier_keys
 xkb_symbols "caps_switch" {
   key <CAPS> {
@@ -9,6 +11,7 @@ xkb_symbols "caps_switch" {
   modifier_map Mod3   { ISO_Level5_Shift };
 };
 
+// CapsLock chooses 5th level, locks when pressed together with another 5th-level-chooser
 partial modifier_keys
 xkb_symbols "caps_switch_lock" {
 
@@ -20,6 +23,7 @@ xkb_symbols "caps_switch_lock" {
   };
 };
 
+// CapsLock chooses 5th level, latches (acts as one-time lock) when pressed together with another 5th-level-chooser
 partial modifier_keys
 xkb_symbols "caps_switch_lock_cancel" {
 

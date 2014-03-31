@@ -3,7 +3,8 @@
 //  *****************************************************************************************
 // ******                                                                               ******
 // *****       Colemak layouts - additions, locales and learning steps as variants       *****
-// *****                    by Øystein Bech "DreymaR" Gadmar, 2011                       *****
+// *****                    by Øystein Bech "DreymaR" Gadmar, 2011-2014                  *****
+// *****                     (The Colemak layout: Shai Coleman, 2006)                    *****
 // ******                                                                               ******
 //  *****************************************************************************************
 
@@ -114,7 +115,7 @@ xkb_symbols "cmk_ed" {
     name[Group1]= "English/Intl (Colemak, edition DreymaR)";
 };
 
-partial alphanumeric_keys
+hidden partial alphanumeric_keys
 xkb_symbols "cmk_ed_letters" {
     //  Alphanumeric section (letter keys and semicolon)
     key <AD01> { [             q,             Q,  singlelowquotemark,  doublelowquotemark ] };
@@ -122,10 +123,10 @@ xkb_symbols "cmk_ed_letters" {
     key <AD03> { [             f,             F,rightsinglequotemark,rightdoublequotemark ] };
     key <AD04> { [             p,             P,            Greek_pi,           paragraph ] };
     key <AD05> { [             g,             G,                 eng,                 ENG ] };
-    key <AD06> { [             j,             J,           0x1000283,           0x10001A9 ] };
+    key <AD06> { [             j,             J,               U0283,               U01A9 ] };
     key <AD07> { [             l,             L,             lstroke,             Lstroke ] };
-    key <AD08> { [             u,             U,           0x1002039,       guillemotleft ] };
-    key <AD09> { [             y,             Y,           0x100203A,      guillemotright ] };
+    key <AD08> { [             u,             U,               U2039,       guillemotleft ] };
+    key <AD09> { [             y,             Y,               U203A,      guillemotright ] };
     key <AD10> { [     semicolon,         colon,      dead_diaeresis,            ellipsis ] };
     //  U2039/203A single guillemets; U0283/01A9 esh/ESH
     key <AC01> { [             a,             A,                  ae,                  AE ] };
@@ -133,31 +134,31 @@ xkb_symbols "cmk_ed_letters" {
     key <AC03> { [             s,             S,              ssharp,             section ] };
     key <AC04> { [             t,             T,               thorn,               THORN ] };
     key <AC05> { [             d,             D,                 eth,                 ETH ] };
-    key <AC06> { [             h,             H,       Greek_epsilon,               schwa ] };
+    key <AC06> { [             h,             H,               schwa,       Greek_epsilon ] };
     key <AC07> { [             n,             N,              endash,           leftarrow ] };
     key <AC08> { [             e,             E,           downarrow,             uparrow ] };
     key <AC09> { [             i,             I,              emdash,          rightarrow ] };
     key <AC10> { [             o,             O,           masculine,         ordfeminine ] };
     //
-    key <AB01> { [             z,             Z,           0x1000292,           0x10001B7 ] };
+    key <AB01> { [             z,             Z,               U0292,               U01B7 ] };
     key <AB02> { [             x,             X,              dagger,        doubledagger ] };
     key <AB03> { [             c,             C,           copyright,                cent ] };
-    key <AB04> { [             v,             V,         Greek_gamma,            division ] };
-    key <AB05> { [             b,             B,          Greek_beta,  enfilledcircbullet ] };
+    key <AB04> { [             v,             V,            division,         Greek_gamma ] };
+    key <AB05> { [             b,             B,  enfilledcircbullet,          Greek_beta ] };
     key <AB06> { [             k,             K,            ccedilla,            Ccedilla ] };
-    key <AB07> { [             m,             M,                  mu,            multiply ] };
+    key <AB07> { [             m,             M,            multiply,                  mu ] };
     //  U0292/01B7 ezh/EZH
 };
 
-partial alphanumeric_keys
+hidden partial alphanumeric_keys
 xkb_symbols "cmk_ed_symbols" {
     //  Alphanumeric section (number/symbol keys)
-    key <TLDE> { [         grave,    asciitilde,          dead_tilde,           0x1002248 ] };
+    key <TLDE> { [         grave,    asciitilde,          dead_tilde,               U2248 ] };
     key <AE01> { [             1,        exclam,       dead_belowdot,          exclamdown ] };
     key <AE02> { [             2,            at,           dead_hook,         twosuperior ] };
     key <AE03> { [             3,    numbersign,           dead_horn,       threesuperior ] };
     key <AE04> { [             4,        dollar,       dead_currency,            sterling ] };
-    key <AE05> { [             5,       percent,            EuroSign,           0x1002030 ] };
+    key <AE05> { [             5,       percent,            EuroSign,               U2030 ] };
     key <AE06> { [             6,   asciicircum,     dead_circumflex,   partialderivative ] };
     key <AE07> { [             7,     ampersand,          dead_caron,             notsign ] };
     key <AE08> { [             8,      asterisk,         dead_ogonek,            infinity ] };
@@ -169,7 +170,7 @@ xkb_symbols "cmk_ed_symbols" {
     key <AD11> { [   bracketleft,     braceleft,               aring,               Aring ] };
     key <AD12> { [  bracketright,    braceright,         Greek_alpha,         Greek_delta ] };
     //
-    key <AC11> { [    apostrophe,      quotedbl,          dead_acute,           0x1002032 ] };
+    key <AC11> { [    apostrophe,      quotedbl,          dead_acute,               U2032 ] };
     key <BKSL> { [     backslash,           bar,          dead_grave,           brokenbar ] };
     // U2032 prime
     key <LSGT> { [            oe,            OE,              oslash,            Ooblique ] };
@@ -188,7 +189,7 @@ xkb_symbols "cmk_ed_symbols" {
 // - Rare/dropped: U25CA lozenge (Mac; rare); kra (deprecated Inuktitut & IPA);
 //      union/intersection/includedin; integral (need a science/math deadkey; use esh in a pinch);
 //      numerosign (mostly Cyrillic; use N + masc.); squareroot (unworkable); function (use hook-f);
-//      U1E9E Capital German SS; U2033/U2032 double-/prime (cheat w/ acute/doubleacute?!)
+//      U1E9E Capital German SS (disputed); U2033/U2032 double-/prime (cheat w/ acute/doubleacute?!)
 //      U2639/U263A/U27E8/27E9 sadface/smilingface/brackets (poorly implemented)
 // - Oddly placed?: 'notsign'/'division' (placed by shape/association)?
 // TODO: Compose/deadkeys: ligatures (fi/fl/ij); fractions/superior/subscripts; latin/IPA/currencies
@@ -227,11 +228,11 @@ xkb_symbols "tarmak1_e" {
     name[Group1]= "English/Intl (Tarmak1_E - Colemak transitional)";
 
     //  Alphanumeric section (letter keys and semicolon)
-    key <AD03> { [             j,             J,           0x1000283,           0x10001A9 ] };
+    key <AD03> { [             j,             J,               U0283,               U01A9 ] };
     key <AD04> { [             r,             R,          registered,           trademark ] };
     key <AD05> { [             t,             T,               thorn,               THORN ] };
-    key <AD06> { [             y,             Y,           0x100203A,      guillemotright ] };
-    key <AD07> { [             u,             U,           0x1002039,       guillemotleft ] };
+    key <AD06> { [             y,             Y,               U203A,      guillemotright ] };
+    key <AD07> { [             u,             U,               U2039,       guillemotleft ] };
     key <AD08> { [             i,             I,              emdash,          rightarrow ] };
     key <AD09> { [             o,             O,           masculine,         ordfeminine ] };
     key <AD10> { [             p,             P,            Greek_pi,           paragraph ] };
@@ -254,15 +255,15 @@ xkb_symbols "tarmak2_et" {
 
     //  Alphanumeric section (letter keys and semicolon)
     key <AD04> { [             r,             R,          registered,           trademark ] };
-    key <AD06> { [             y,             Y,           0x100203A,      guillemotright ] };
-    key <AD07> { [             u,             U,           0x1002039,       guillemotleft ] };
+    key <AD06> { [             y,             Y,               U203A,      guillemotright ] };
+    key <AD07> { [             u,             U,               U2039,       guillemotleft ] };
     key <AD08> { [             i,             I,              emdash,          rightarrow ] };
     key <AD09> { [             o,             O,           masculine,         ordfeminine ] };
     key <AD10> { [             p,             P,            Greek_pi,           paragraph ] };
     //
     key <AC02> { [             s,             S,              ssharp,             section ] };
     key <AC03> { [             d,             D,                 eth,                 ETH ] };
-    key <AC05> { [             j,             J,           0x1000283,           0x10001A9 ] };
+    key <AC05> { [             j,             J,               U0283,               U01A9 ] };
     key <AC09> { [             l,             L,             lstroke,             Lstroke ] };
     key <AC10> { [     semicolon,         colon,      dead_diaeresis,            ellipsis ] };
 };
@@ -277,7 +278,7 @@ xkb_symbols "tarmak3_eto" {
 
     //  Alphanumeric section (letter keys and semicolon)
     key <AD04> { [             r,             R,          registered,           trademark ] };
-    key <AD07> { [             u,             U,           0x1002039,       guillemotleft ] };
+    key <AD07> { [             u,             U,               U2039,       guillemotleft ] };
     key <AD08> { [             i,             I,              emdash,          rightarrow ] };
     key <AD10> { [             p,             P,            Greek_pi,           paragraph ] };
     //
@@ -349,7 +350,7 @@ xkb_symbols "cmk_ed_mirror" {
     name[Group1] = "English/Intl (Colemak[eD], mirrored)";
 };
 
-partial alphanumeric_keys
+hidden partial alphanumeric_keys
 xkb_symbols "cmk_ed_mirror_letters" {
     //  Alphanumeric section (letter keys and semicolon)
     key <AD10> { [             q,             Q,  singlelowquotemark,  doublelowquotemark ] };
@@ -357,41 +358,41 @@ xkb_symbols "cmk_ed_mirror_letters" {
     key <AD08> { [             f,             F,rightsinglequotemark,rightdoublequotemark ] };
     key <AD07> { [             p,             P,            Greek_pi,           paragraph ] };
     key <AD06> { [             g,             G,                 eng,                 ENG ] };
-    key <AD05> { [             j,             J,           0x1000283,           0x10001A9 ] };
+    key <AD05> { [             j,             J,               U0283,               U01A9 ] };
     key <AD04> { [             l,             L,             lstroke,             Lstroke ] };
-    key <AD03> { [             u,             U,           0x1002039,       guillemotleft ] };
-    key <AD02> { [             y,             Y,           0x100203A,      guillemotright ] };
+    key <AD03> { [             u,             U,               U2039,       guillemotleft ] };
+    key <AD02> { [             y,             Y,               U203A,      guillemotright ] };
     key <AD01> { [     semicolon,         colon,      dead_diaeresis,            ellipsis ] };
     key <AC10> { [             a,             A,                  ae,                  AE ] };
     key <AC09> { [             r,             R,          registered,           trademark ] };
     key <AC08> { [             s,             S,              ssharp,             section ] };
     key <AC07> { [             t,             T,               thorn,               THORN ] };
     key <AC06> { [             d,             D,                 eth,                 ETH ] };
-    key <AC05> { [             h,             H,       Greek_epsilon,               schwa ] };
+    key <AC05> { [             h,             H,               schwa,       Greek_epsilon ] };
     key <AC04> { [             n,             N,              endash,           leftarrow ] };
     key <AC03> { [             e,             E,           downarrow,             uparrow ] };
     key <AC02> { [             i,             I,              emdash,          rightarrow ] };
     key <AC01> { [             o,             O,           masculine,         ordfeminine ] };
-    key <AB10> { [             z,             Z,           0x1000292,           0x10001B7 ] };
+    key <AB10> { [             z,             Z,               U0292,               U01B7 ] };
     key <AB09> { [             x,             X,              dagger,        doubledagger ] };
     key <AB08> { [             c,             C,           copyright,                cent ] };
-    key <AB07> { [             v,             V,         Greek_gamma,            division ] };
-    key <AB06> { [             b,             B,          Greek_beta,  enfilledcircbullet ] };
+    key <AB07> { [             v,             V,            division,         Greek_gamma ] };
+    key <AB06> { [             b,             B,  enfilledcircbullet,          Greek_beta ] };
     key <AB05> { [             k,             K,            ccedilla,            Ccedilla ] };
-    key <AB04> { [             m,             M,                  mu,            multiply ] };
+    key <AB04> { [             m,             M,            multiply,                  mu ] };
 };
 
-partial alphanumeric_keys
+hidden partial alphanumeric_keys
 xkb_symbols "cmk_ed_mirror_symbols" {
     //  Alphanumeric section (number/symbol keys)
 // TODO: Make the <BSKP> 4-level for this mod; others?
-    key <BKSP> { [         grave,    asciitilde,          dead_tilde,           0x1002248 ] };
+    key <BKSP> { [         grave,    asciitilde,          dead_tilde,               U2248 ] };
     key <AE12> { [         equal,          plus,    dead_doubleacute,            notequal ] };
     key <AE11> { [             1,        exclam,       dead_belowdot,          exclamdown ] };
     key <AE10> { [             2,            at,           dead_hook,         twosuperior ] };
     key <AE09> { [             3,    numbersign,           dead_horn,       threesuperior ] };
     key <AE08> { [             4,        dollar,            currency,            sterling ] };
-    key <AE07> { [             5,       percent,            EuroSign,           0x1002030 ] };
+    key <AE07> { [             5,       percent,            EuroSign,               U2030 ] };
     key <AE06> { [             6,   asciicircum,     dead_circumflex,   partialderivative ] };
     key <AE05> { [             7,     ampersand,          dead_caron,             notsign ] };
     key <AE04> { [             8,      asterisk,         dead_ogonek,            infinity ] };
@@ -406,12 +407,12 @@ xkb_symbols "cmk_ed_mirror_symbols" {
     key <LSGT> { [            oe,            OE,              oslash,            Ooblique ] };
     key <BKSL> { [     backslash,           bar,          dead_grave,           brokenbar ] };
     key <ESC>  { [     backslash,           bar,          dead_grave,           brokenbar ] };
-    key <AC11> { [    apostrophe,      quotedbl,          dead_acute,           0x1002032 ] };
-    key <CAPS> { [    apostrophe,      quotedbl,          dead_acute,           0x1002032 ] };
+    key <AC11> { [    apostrophe,      quotedbl,          dead_acute,               U2032 ] };
+    key <CAPS> { [    apostrophe,      quotedbl,          dead_acute,               U2032 ] };
     key <SPCE> { [         space,         space,        nobreakspace,        nobreakspace ] };
 };
 
-partial
+hidden partial
 xkb_symbols "cmk_ed_mirror_special" {
     //  Tab/Back/Enter/Esc/Alt(?) keys for a mirrored layout (ignoring the duplex Shift and Ctrl)
     key <TLDE> { [ BackSpace         ] };

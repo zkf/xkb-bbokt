@@ -31,3 +31,4 @@ xkb_symbols "cmk_ed_us" {
 // ** NOTE: The pt and br layouts have been harmonized; this should not affect typing efficiency.
 //    Whether to keep the acute on br <AD11> or pt <AD12> was a bit of a choice; the acute seems logical.
 };
+
